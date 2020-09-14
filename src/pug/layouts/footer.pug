@@ -1,0 +1,47 @@
+mixin footer()
+    // footer
+    footer.footer
+        .container-fluid
+            .row.align-items-center
+
+                .col-md-6
+
+                    .footer-contacts
+                        .footer-contacts__heading Контакты
+                        address.footer-contacts__body
+                            p Коммуникационное агентство
+                            p 344000, Россия, г. Ростов-на-Дону ул. Мира, д. 12 #[br]Бизнес–центр «Рост», оф. 104
+                            .footer-contacts__info
+                                .row
+                                    .col-xl-6
+                                        ul.footer-contacts__info-list
+                                            li.footer-contacts__info-item
+                                                a(href="tel:+78613001128") +7 (861) 300-11-28 
+                                            li.footer-contacts__info-item
+                                                a(href="tel:+78613001152") +7 (861) 300-11-52 
+                                            li.footer-contacts__info-item
+                                                a(href="tel:+78613001152") +7 (861) 300-11-52
+                                    .col-xl-6
+                                        .footer-contacts__info-extra
+                                            .footer-contacts__info-extra-field
+                                                span Email: 
+                                                a(href="mailto:info@example.com") info@example.com
+                                            .footer-contacts__info-extra-field
+                                                a(href="") Facebook.com/exampleagency
+
+                .col-md-6
+
+                    +b.FORM.callback-form(action="/" name="callback-form" method="POST")
+                        +e.field
+                            +e.INPUT.input(type="text" name="user-name" placeholder="Полное имя")
+                        +e.field
+                            +e.INPUT.input(type="email" name="user-email" placeholder="E-mail")
+                        +e.field
+                            +e.INPUT.input(type="tel" name="user-phone" placeholder="Телефон")
+                        +e.field
+                            +e.TEXTAREA.textarea(name="user-message" placeholder="Пожалуйста, опишите задачу")
+                        .text-center
+                            +e.privacy-wrap
+                                +e.A.privacy(href="#") Политика обработки персональных данных
+                            +e.INPUT.btn.btn--primary-reverse(type="submit" name="send-data" value="Отправить заявку")
+    // /footer

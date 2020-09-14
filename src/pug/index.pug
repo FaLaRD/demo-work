@@ -1,0 +1,53 @@
+extends templates/main
+
+block variables
+    - const title = 'Home page';
+    - const pageClass = 'index-page';
+    - const logoIndex = true;
+
+block content
+
+  .container-fluid
+
+      main.content
+
+        section.section
+          .section__heading Реализованные проекты
+          .section__promo
+            p Коммуникационное агентство – часть многофункционального холдинга, объединяющего различные компании на территории России и ближнего зарубежья. 
+            p Наши подходы к организации бизнеса и имеющиеся ресурсы позволяют одинаково эффективно обеспечивать реализацию как крупномасштабных федеральных или международных проектов, так и решать небольшие локальные задачи. Мы находимся в постоянном развитии, расширяя и укрепляя имеющиеся бизнес-направления, а также формируя новые.
+
+  section.projects-section
+
+    .row.no-gutters
+
+      .col-sm-4
+
+        +b.FIGURE.project
+          +e.img-wrap
+            +e.IMG.img(src="assets/images/media/project-1.jpg" alt="")
+          +e.FIGCAPTION.about
+            +e.caption Республика Саха
+            +e.A.btn.btn--primary(href="#" data-modal-win-trigger="project-1") Подробнее
+
+      .col-sm-4
+
+        +b.FIGURE.project
+          +e.img-wrap
+            +e.IMG.img(src="assets/images/media/project-2.jpg" alt="")
+          +e.FIGCAPTION.about
+            +e.caption Газпром
+            +e.A.btn.btn--primary(href="#" data-modal-win-trigger="project-2") Подробнее
+
+      .col-sm-4
+
+        +b.FIGURE.project
+          +e.img-wrap
+            +e.IMG.img(src="assets/images/media/project-3.jpg" alt="")
+          +e.FIGCAPTION.about
+            +e.caption Nokia
+            +e.A.btn.btn--primary(href="#" data-modal-win-trigger="project-3") Подробнее
+
+    .projects-section__more
+
+      a.btn.btn--primary-reverse(href="#") Загрузить еще

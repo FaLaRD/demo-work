@@ -1,0 +1,37 @@
+include ../utils/mixins
+
+include ../utils/bemto/bemto
+- set_bemto_settings({ modifier: "--" });
+
+block variables
+
+include head
+include ../layouts/footer
+
+doctype html
+html(lang="ru-RU")
+
+    head
+        +head()
+
+    body(class=pageClass)
+
+        .wrapper
+
+            .wrapper__main
+
+                block content
+
+            .wrapper__footer
+
+                block footer
+                    +footer()
+
+        include ../components/modal-project-1
+        include ../components/modal-project-2
+        include ../components/modal-project-3
+
+        script(src="assets/js/libs.min.js")
+        script(src="assets/js/main.js")
+
+        block script
